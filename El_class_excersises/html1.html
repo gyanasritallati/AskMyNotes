@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Methods Demonstration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        .section-title {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-left: 5px solid #3498db;
+            margin-top: 25px;
+        }
+
+        #main-heading {
+            color: #2980b9;
+            padding: 10px;
+            border: 2px dashed #2980b9;
+            text-align: center;
+        }
+
+        .student-card {
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 5px solid #95a5a6;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            border-left: 5px solid #f39c12;
+        }
+
+        .course {
+            padding: 8px;
+            margin: 6px 0;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .important {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 8px 5px;
+            padding: 10px 14px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #217dbb;
+        }
+
+        .reset-btn {
+            background-color: #e74c3c;
+        }
+
+        .reset-btn:hover {
+            background-color: #c0392b;
+        }
+
+        #output {
+            background-color: #1e1e1e;
+            color: #00ff90;
+            padding: 15px;
+            min-height: 80px;
+            border-radius: 8px;
+            margin-top: 20px;
+            white-space: pre-line;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 id="main-heading">DOM Methods Demonstration</h1>
+</header>
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>Available Courses</h2>
+    </div>
+
+    <div id="course-list">
+        <div id="html-course" class="course">HTML</div>
+        <div class="course important">CSS</div>
+        <div class="course">JavaScript</div>
+        <div class="course important">React</div>
+    </div>
+
+    <div class="section-title">
+        <h2>DOM Method Buttons</h2>
+    </div>
+
+    <button onclick="demoGetElementById()">getElementById()</button>
+    <button onclick="demoGetElementsByClassName()">getElementsByClassName()</button>
+    <button onclick="demoGetElementsByTagName()">getElementsByTagName()</button>
+    <button onclick="demoQuerySelector()">querySelector()</button>
+    <button onclick="demoQuerySelectorAll()">querySelectorAll()</button>
+    <button class="reset-btn" onclick="resetOutput()">Reset</button>
+
+    <h2>Output:</h2>
+
+    <div id="output">Click any DOM method button to see the result.</div>
+
+</div>
+
+<script>
+    const outputDiv = document.getElementById("output");
+
+    function demoGetElementById() {
+        outputDiv.innerText = "Method: getElementById()\n\nIt selects one element using its id.\n\nSelected element id: main-heading";
+    }
+
+    function demoGetElementsByClassName() {
+        outputDiv.innerText = "Method: getElementsByClassName()\n\nIt selects a collection of elements with a specified class name.\n\nSelected elements class: important";
+    }
+
+    function demoGetElementsByTagName() {
+        outputDiv.innerText = "Method: getElementsByTagName()\n\nIt selects a collection of elements with a specified tag name.\n\nSelected elements tag: div";
+    }
+
+    function demoQuerySelector() {
+        outputDiv.innerText = "Method: querySelector()\n\nIt selects the first element that matches a specified CSS selector.\n\nSelected selector: .course";
+    }
+
+    function demoQuerySelectorAll() {
+        outputDiv.innerText = "Method: querySelectorAll()\n\nIt selects all elements that match a specified CSS selector.\n\nSelected selector: .course";
+    }
+
+    function resetOutput() {
+        outputDiv.innerText = "Click any DOM method button to see the result.";
+    }
+</script>
+
+</body>
+</html>

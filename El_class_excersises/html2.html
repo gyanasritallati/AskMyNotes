@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <div class="container">
+     <button onclick="demoGetElementById()">getElementById()</button>
+     <h3>
+      Output:
+     </h3>
+  </div id="output">click any button to see the result here.<div>
+
+  </div>
+  <script>
+    function showOutput(message){
+      document.getElementById("output").innerText=message;
+    }
+    function demoGetElementById(){
+      let heading =document.getElementById("main-heading");
+
+      heading.style.backgroundColor="#dlecf1";
+      heading.style.color="30c5460";
+      heading.innerText="select using getElementById()";
+      
+      showOutput(
+        "method:getElementById()\n "+
+      );
+    }
+  </script>
+
+</body>
+</html>
